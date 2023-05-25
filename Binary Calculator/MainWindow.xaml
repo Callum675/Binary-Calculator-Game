@@ -1,0 +1,51 @@
+﻿<Window x:Class="Binary_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Binary_Calculator"
+        mc:Ignorable="d"
+                Title="Binary Calculator C#" Height="450" Width="800">
+    <Grid Name="mainGrid" Height="431">
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="100"></RowDefinition>
+            <RowDefinition Height ="50"></RowDefinition>
+            <RowDefinition Height ="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" FontSize="20">256</Label>
+        <Label Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontSize="20">128</Label>
+        <Label Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" FontSize="20">64</Label>
+        <Label Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" FontSize="20">32</Label>
+        <Label Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" FontSize="20">16</Label>
+        <Label Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" FontSize="20">8</Label>
+        <Label Grid.Column="6" Grid.Row="1" HorizontalAlignment="Center" FontSize="20">4</Label>
+        <Label Grid.Column="7" Grid.Row="1" HorizontalAlignment="Center" FontSize="20">2</Label>
+        <Label Grid.Column="8" Grid.Row="1" HorizontalAlignment="Center" FontSize="20">1</Label>
+        <TextBox Margin="0,10,0,13" MaxLength="1" Grid.Row="2" Background="LightCoral" MaxLines="1" FontSize="20" TextAlignment="Center" Tag="256" HorizontalAlignment="Center" Width="77"/>
+        <TextBox Margin="0,10,0,13" MaxLength="1" Background="LightCyan" MaxLines="1" FontSize="20" TextAlignment="Center" Tag="128" Grid.Column="1" Grid.Row="2" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="77" />
+        <TextBox Margin="0,10,0,13" MaxLength="1" Background="LightGreen" MaxLines="1" FontSize="20" TextAlignment="Center" Tag="64" Grid.Column="2" Grid.Row="2" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="77" />
+        <TextBox Margin="0,10,0,13" MaxLength="1" Background="Plum" MaxLines="1" FontSize="20" TextAlignment="Center" Tag="32" Grid.Column="3" Grid.Row="2" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="77" />
+        <TextBox Margin="0,10,0,13" MaxLength="1" Background="LightSlateGray" MaxLines="1" FontSize="20" TextAlignment="Center" Tag="16" Grid.Column="4" Grid.Row="2" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="76"/>
+        <TextBox Margin="0,10,0,13" MaxLength="1" Background="LightGray" MaxLines="1" FontSize="20" TextAlignment="Center" Tag="8" Grid.Column="5" Grid.Row="2" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="77"/>
+        <TextBox Margin="0,10,0,13" MaxLength="1" Background="LightYellow" MaxLines="1" FontSize="20" TextAlignment="Center" Tag="4" Grid.Column="6" Grid.Row="2" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="77"/>
+        <TextBox Margin="0,10,0,13" MaxLength="1" Background="YellowGreen" MaxLines="1" FontSize="20" TextAlignment="Center" Tag="2" Grid.Column="7" Grid.Row="2" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="77"/>
+        <TextBox Margin="0,10,0,13" MaxLength="1" Background="Aqua" MaxLines="1" FontSize="20" TextAlignment="Center" Tag="1" Grid.Column="8" Grid.Row="2" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="77"/>
+        <Label FontSize="25" Content="Binary Calculator in WPF" Grid.ColumnSpan="5" HorizontalAlignment="Left" Width="356" Height="100" VerticalAlignment="Top"/>
+        <Label Name="questionTxt" HorizontalContentAlignment="Center" FontSize="25" Content="Question" Margin="0,92,0,-41" Foreground="Green" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Grid.ColumnSpan="6" Grid.Column="1" Width="533" />
+        <Label Name="answerTxt" HorizontalContentAlignment="Center" FontSize="25" Content="Answer in Binary" Margin="0,141,0,-90" Foreground="Maroon" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Grid.ColumnSpan="6" Grid.Column="1" Width="533" />
+        <Button Name="checkButton" Click="checkAnswer" FontSize="16" Margin="0,204,0,-142" Content="Check!" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" Width="155" />
+        <Button Click="startGame" Margin="10,9,6,0" Content="Start" Grid.Column="8" Height="33" VerticalAlignment="Top" Background="LightGreen"/>
+        <Button Click="showHelp" Margin="10,53,6,0" Content="Help" Grid.Column="8" Height="33" VerticalAlignment="Top" Background="LightPink"/>
+    </Grid>
+</Window>
